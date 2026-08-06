@@ -33,3 +33,4 @@ Here are items I got working
 
 ## Reference
 * ChatGPT - Assisted in discovering the live movie list api I leveraged in this project ( Reference above )
+* FlatIcon - Used on Nav menu Icons (SVG)
