@@ -1,97 +1,35 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# StreamShelf - Take Home Project ( The Weather Channel )
 
-# Getting Started
+Before I proceed on instruction to build, let me use this opportunity to thank y'all. I have run out of time so I am left with wrapping up `MyList` component. This is the last piece left and also I couldn't get to setup my project to test out all my components as they were so many components to test once my time elapsed.
 
-> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
+**NOTE*** *I have enabled the new react Arch for this project and also I am leveraging react new compiler. With this I do not need to regular memoization hooks. Hence you will observe there are no `useMemo`'s `useCallback`'s and all of that. Just wanted to highlight on this* 
 
-## Step 1: Start Metro
+Here are items I got working
+- Focus Manager 
+- Built a swimlane list of 3 different contents ( Home screen in a nutshell )
+- Implemented by pulling live data from [here](https://developer.themoviedb.org/docs/daily-id-exports)
+    - A quick note on this, this api requires an access token and these tokens unfortunately expires in couple of hours once they are generated
+    - Once these tokens expire the list will be ultimately empty. Now we need to generate a fresh one. We can either create an account with the link I attached or whenever you are about to try this out I can grab you one from my account quickly
+        - You can easily replace this token within this path `src/shared/carousel/constants/constant.ts`
+        - It's not a `.env` for this project its a variable called `CONTENT_ACCESS_TOKEN` - ( the long jwt token! )
+    - Built a quick Loading, Error and empty list container
+    - Accounted for Errors, loading, as well as Network disruptions etc
+    - I implemented the Details screen as well ( In my case I called it the CommonInfo )
+    - I got navigations working - Navigating when from clicking a content card to displaying the CommonInfo component
+    - Tried to ensure every single component and variables are stringly typed
+    - Also the project used NativeWind - ( So no native react styling )
+    - ***Another important point*** - Contents from Favorite TV Show do not come back with Titles hence it has none for the most part
+    - I can also show during demo how I will approach handling `MyList`
 
-First, you will need to run **Metro**, the JavaScript build tool for React Native.
 
-To start the Metro dev server, run the following command from the root of your React Native project:
+## Steps to build this project
+* Ensure you have you environments all set up
+    * node version ``` >= 20 ``` should suffice
+    * Ensure you have yoru android env especially set up correctly. I am running on Zulu Java env as recommended by react to set up android 
+    * Ensure to run a simple `./gradlew clean` - by navigating into the android folder `cd android` from the root of your project
+    * Remove any existing `node_modules` ( `rm -f node_modules` ) then re-install using the `yarn` command
+    * I ran this project on AndroidTV Emulator. You can use the emulator or a physical device leveraging `adb` command
+    * After running `yarn install` pls also run `npx pod-install` - can run from root with cd'n into the `ios` dir  or `cd ios && pod install` ( just to ensure we carry tvOS or iOS along )
 
-```sh
-# Using npm
-npm start
-
-# OR using Yarn
-yarn start
-```
-
-## Step 2: Build and run your app
-
-With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
-
-### Android
-
-```sh
-# Using npm
-npm run android
-
-# OR using Yarn
-yarn android
-```
-
-### iOS
-
-For iOS, remember to install CocoaPods dependencies (this only needs to be run on first clone or after updating native deps).
-
-The first time you create a new project, run the Ruby bundler to install CocoaPods itself:
-
-```sh
-bundle install
-```
-
-Then, and every time you update your native dependencies, run:
-
-```sh
-bundle exec pod install
-```
-
-For more information, please visit [CocoaPods Getting Started guide](https://guides.cocoapods.org/using/getting-started.html).
-
-```sh
-# Using npm
-npm run ios
-
-# OR using Yarn
-yarn ios
-```
-
-If everything is set up correctly, you should see your new app running in the Android Emulator, iOS Simulator, or your connected device.
-
-This is one way to run your app — you can also build it directly from Android Studio or Xcode.
-
-## Step 3: Modify your app
-
-Now that you have successfully run the app, let's make changes!
-
-Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
-
-When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
-
-- **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
-- **iOS**: Press <kbd>R</kbd> in iOS Simulator.
-
-## Congratulations! :tada:
-
-You've successfully run and modified your React Native App. :partying_face:
-
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+## Reference
+* ChatGPT - Assisted in discovering the live movie list api I leveraged in this project ( Reference above )
