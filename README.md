@@ -1,3 +1,11 @@
+
+
+https://github.com/user-attachments/assets/c086ce84-8844-4392-a21f-2685b61ceedd
+
+
+
+
+
 # StreamShelf - Take Home Project ( The Weather Channel )
 
 Before I proceed on instruction to build, let me use this opportunity to thank y'all. I have run out of time so I am left with wrapping up `MyList` component. This is the last piece left and also I couldn't get to setup my project to test out all my components as they were so many components to test once my time elapsed.
