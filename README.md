@@ -8,7 +8,7 @@ https://github.com/user-attachments/assets/c086ce84-8844-4392-a21f-2685b61ceedd
 
 # StreamShelf - Take Home Project ( The Weather Channel )
 
-Before I proceed on instruction to build, let me use this opportunity to thank y'all. I have run out of time so I am left with wrapping up `MyList` component. This is the last piece left and also I couldn't get to setup my project to test out all my components as they were so many components to test once my time elapsed.
+Before I proceed on instruction to build, let me use this opportunity to thank y'all. Since I ran out of some time I couldn't get my unit tests all set up. Also I now added My List feature. It can definitely be optimized e.g optimizing the scrolling as well as the list can be added as an update to this. Also, I noticed after I add my ctas dont update so this is another left to complete. other than the above mentioned the project is complete.
 
 **NOTE*** *I have enabled the new react Arch for this project and also I am leveraging react new compiler. With this I do not need to regular memoization hooks. Hence you will observe there are no `useMemo`'s `useCallback`'s and all of that. Just wanted to highlight on this* 
 
