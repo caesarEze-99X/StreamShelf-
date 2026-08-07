@@ -10,7 +10,7 @@ https://github.com/user-attachments/assets/c086ce84-8844-4392-a21f-2685b61ceedd
 
 Before I proceed on instruction to build, let me use this opportunity to thank y'all. Since I ran out of time I couldn't get my unit tests all set up. Also I now added My List feature. It can definitely be optimized e.g optimizing the scrolling as well as the list can be added as an update to this. Also, I noticed after I add to my list of movies or tv shows, ctas dont update so this is another update left to complete. Other than the above mentioned, the project is complete.
 
-**NOTE*** *I have enabled the new react Arch for this project and also I am leveraging react new compiler. With this I do not need to regular memoization hooks. Hence you will observe there are no `useMemo`'s `useCallback`'s and all of that. Just wanted to highlight on this* 
+**NOTE*** *I have enabled the new react Arch for this project and also I am leveraging react new compiler. With this I do not need the regular memoization hooks. Hence you will observe there are no `useMemo`'s `useCallback`'s and all of that. Just wanted to highlight on this* 
 
 Here are items I got working
 - Focus Manager 
