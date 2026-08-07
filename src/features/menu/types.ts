@@ -15,6 +15,7 @@ export type MenuStoreState = {
 export type MenuItemHook = {
   onFocus: () => void;
   onBlur: () => void;
+  onMenuItemPressed: () => void;
 } & MenuStoreState;
 
 export type MenuRenderItem = { index: number; item: MenuItem };

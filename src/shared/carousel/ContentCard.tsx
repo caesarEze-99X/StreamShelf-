@@ -1,23 +1,23 @@
 import { Image, Text, View } from 'react-native';
 import { useFocusHelper } from 'reusableHooks/useFocusHelper';
 import FocusableButton from 'shared/focusableButton/FocusableButton';
-import { Content } from 'shared/types';
+import { ContentCardProp } from 'shared/types';
 import { useContentCardHelper } from './hooks/useContentCardHelper';
 
-const ContentCard = (props: Partial<Content>) => {
-  const { poster_path, title, onFocusCallback } = props;
+const ContentCard = (props: ContentCardProp) => {
+  const { poster_path, title, onFocusCallback, containerStyle = '' } = props;
   const { onBlur, onFocus, focused } = useFocusHelper(onFocusCallback);
   const { onContentCardPressed } = useContentCardHelper(props);
 
   return (
-    <View>
+    <View className={containerStyle}>
       <FocusableButton
         onFocus={onFocus}
         onBlur={onBlur}
         onPress={onContentCardPressed}
         className={`
-        ml-5
-        w-[300px]
+        ${!containerStyle && 'ml-5'}
+        ${containerStyle && containerStyle.includes('w-') ? '' : 'w-[300px]'}
         h-[200px]
         rounded-xl
         bg-white-opacity-12

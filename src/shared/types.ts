@@ -23,6 +23,7 @@ export type CarouselSectionListItem = {
 export type Content = {
   title: string;
   overview: string;
+  contentId: string;
   poster_path: string;
   backdrop_path?: string;
   onFocusCallback?: FocusCallbackNoIndex;
@@ -91,3 +92,7 @@ export type ContentCardHelperHook = {
 export interface EmptyCarouselProp {
   message: string;
 }
+
+export type ContentCardProp = Partial<Content> & {
+  containerStyle?: string;
+};

@@ -6,7 +6,8 @@ import { Image, Text, View } from 'react-native';
 
 const CommonInfo = () => {
   const route = useRoute<CommonInfoRouteProp>();
-  const { description, title, backdrop_path, bannerImg } = route.params ?? {};
+  const props = route.params ?? {};
+  const { description, title, backdrop_path, bannerImg } = props;
   const imgUrlToUse: string = backdrop_path ?? bannerImg;
 
   const descriptionStyle: string = title ? 'mt-[5%]' : '';
@@ -24,7 +25,7 @@ const CommonInfo = () => {
             <Text className="text-sm color-off-white font-nunito-reg">{description}</Text>
           </View>
           <View className="flex mt-8">
-            <CTAActions />
+            <CTAActions content={props} />
           </View>
         </View>
       </View>

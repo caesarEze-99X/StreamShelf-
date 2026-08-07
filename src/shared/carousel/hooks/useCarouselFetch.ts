@@ -1,3 +1,4 @@
+import { uniqueId } from 'lodash';
 import { useEffect } from 'react';
 import {
   CAROUSEL_CONSTANTS,
@@ -41,6 +42,7 @@ const useCarouselFetch = (sectionId: string): CarouselFetchHook => {
 
   const cleanUpData = (apiResponse: ContentApiResponse): Array<Partial<Content>> =>
     apiResponse.results.map((data: Partial<Content>) => ({
+      contentId: uniqueId(),
       title: data.title,
       overview: data.overview,
       backdrop_path: data.backdrop_path

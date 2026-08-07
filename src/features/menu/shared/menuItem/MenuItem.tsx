@@ -7,7 +7,7 @@ import FocusableButton from 'shared/focusableButton/FocusableButton';
 import { colors } from 'tailwindConfig';
 
 const MenuItem = ({ item }: MenuItemProp) => {
-  const { activeMenu, onFocus, onBlur } = useMenuItem(item);
+  const { activeMenu, onFocus, onBlur, onMenuItemPressed } = useMenuItem(item);
   const Icon: ComponentType<SvgProps> | null = SIDE_MENU_ITEM(item, item === activeMenu);
   const focusedStyle: string = item === activeMenu ? 'bg-white-opacity-70' : '';
 
@@ -18,6 +18,7 @@ const MenuItem = ({ item }: MenuItemProp) => {
       className={`flex-row items-center rounded-full justify-center h-full w-[100px] ${focusedStyle}`}
       onFocus={onFocus}
       onBlur={onBlur}
+      onPress={onMenuItemPressed}
     >
       {Icon && (
         <Icon

@@ -3,14 +3,17 @@ import { Text, View } from 'react-native';
 import { useFocusHelper } from 'reusableHooks/useFocusHelper';
 import FocusableButton from 'shared/focusableButton/FocusableButton';
 
-const CTAItem = ({ item, onPress, index }: CTAItemtype) => {
+const CTAItem = ({ item, onPress, index, onCTAItemPressed }: CTAItemtype) => {
   const { onFocus, onBlur, focused } = useFocusHelper(onPress);
+
+  const onCTAPressed = () => onCTAItemPressed(item);
+
   return (
     <FocusableButton
       hasTVPreferredFocus={index === 0}
       onFocus={onFocus}
       onBlur={onBlur}
-      onPress={onPress}
+      onPress={onCTAPressed}
     >
       <View
         className={`

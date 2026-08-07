@@ -10,6 +10,7 @@ export type RootStackParamList = {
 };
 
 export type CommonInfoParams = {
+  contentId: string;
   bannerImg: string;
   description: string;
   title: string;
