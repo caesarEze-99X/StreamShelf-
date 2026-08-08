@@ -44,3 +44,7 @@ Here are items I got working
 ## Reference
 * ChatGPT - Assisted in discovering the live movie list api I leveraged in this project ( Reference above )
 * FlatIcon - Used on Nav menu Icons (SVG)
+
+
+## NOTE
+I just noticed my Git commit name is still showing as Henry locally. I recently legally changed my name and have already communicated this to Caleb. I have the relevant legal documentation if needed. Apologies for any confusion!
