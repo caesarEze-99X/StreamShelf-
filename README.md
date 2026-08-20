@@ -24,8 +24,8 @@ https://github.com/user-attachments/assets/b446785f-1726-4216-9877-8c32bd288f23
     - Accounted for Errors, loading, as well as Network disruptions etc
     - I implemented the Details screen as well ( In my case I called it the CommonInfo )
     - I got navigations working - Navigating when from clicking a content card to displaying the CommonInfo component
-    - Tried to ensure every single component and variables are stringly typed
-    - Also the project used NativeWind - ( So no native react styling )
+    - Ensured every single component and variables are strongly typed
+    - Also the project uses NativeWind - ( So no native react styling Yaaay )
     - ***Another important point*** - Contents from Favorite TV Show do not come back with Titles hence it has none for the most part
     - I can also show during demo how I will approach handling `MyList`
 
