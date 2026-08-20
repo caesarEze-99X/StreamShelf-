@@ -12,7 +12,7 @@ https://github.com/user-attachments/assets/b446785f-1726-4216-9877-8c32bd288f23
 
 **NOTE*** *I have enabled the new react Arch for this project and also I am leveraging react new compiler. With this I do not need the regular memoization hooks. Hence you will observe there are no `useMemo`'s `useCallback`'s and all of that. Just wanted to highlight on this* 
 
-Functionalities
+## Functionalities
 - Focus Manager 
 - Built a swimlane list of 3 different contents ( Home screen in a nutshell )
 - Implemented by pulling live data from [here](https://developer.themoviedb.org/docs/daily-id-exports)
