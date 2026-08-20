@@ -8,7 +8,7 @@ https://github.com/user-attachments/assets/b446785f-1726-4216-9877-8c32bd288f23
 
 
 
-# StreamShelf - Take Home Project ( The Weather Channel )
+# StreamShelf
 
 Before I proceed on instruction to build, let me use this opportunity to thank y'all. Since I ran out of time I couldn't get my unit tests all set up. Also I now added My List feature. It can definitely be optimized e.g optimizing the scrolling as well as the list can be added as an update to this. Also, I noticed after I add to my list of movies or tv shows, ctas dont update so this is another update left to complete. Other than the above mentioned, the project is complete.
 
@@ -40,11 +40,3 @@ Here are items I got working
     * Remove any existing `node_modules` ( `rm -f node_modules` ) then re-install using the `yarn` command
     * I ran this project on AndroidTV Emulator. You can use the emulator or a physical device leveraging `adb` command
     * After running `yarn install` pls also run `npx pod-install` - can run from root with cd'n into the `ios` dir  or `cd ios && pod install` ( just to ensure we carry tvOS or iOS along )
-
-## Reference
-* ChatGPT - Assisted in discovering the live movie list api I leveraged in this project ( Reference above )
-* FlatIcon - Used on Nav menu Icons (SVG)
-
-
-## NOTE
-I just noticed my Git commit name is still showing as Henry locally. I recently legally changed my name and have already communicated this to Caleb. I have the relevant legal documentation if needed. Apologies for any confusion!
